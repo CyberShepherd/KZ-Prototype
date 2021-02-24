@@ -1,0 +1,14 @@
+POST http://localhost:8080/api/person
+Content-Type: application/json
+
+
+{
+  "pesel" : "97043105225",
+  "fullname" : "Maria Skłodowska-Curie",
+  "address" : "Kaczyńskiego 37b/5",
+  "postalCode" : "83-201",
+  "city" : "Wilkowyje",
+  "county" : "Polska",
+  "email" : "m.sklodowska@polon.pl",
+  "phoneNumber" : "+48607455118"
+}

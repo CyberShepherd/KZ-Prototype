@@ -25,7 +25,7 @@ public class Person {
             generator = "person_sequence"
     )
     private Long id;
-    private String PESEL;
+    private String pesel;
     private String fullname;
     private String address;
     private String postalCode;
