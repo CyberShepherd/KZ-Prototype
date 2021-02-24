@@ -1,0 +1,42 @@
+body{
+
+}
+
+label {
+
+}
+
+#container {
+    width: 100%;
+    min-height: 1080px;
+}
+
+#header {
+    width: 100%;
+    min-height: 60px;
+    padding: 10px;
+}
+
+#header div {
+    float: left;
+}
+
+#slider {
+    width: 100%;
+    min-height: 550px;
+    min-width: 1000px;
+    background-image: url("img/winter0.jpg");
+    background-size: 100%;
+    background-position: bottom;
+}
+
+#userform {
+    width: 100%;
+    min-height: 550px;
+}
+
+#footer {
+    width: 100%;
+    min-height: 30px;
+    padding: 10px;
+}

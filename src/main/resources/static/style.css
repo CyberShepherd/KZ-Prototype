@@ -1,0 +1,41 @@
+body {
+    color: #f6f6f6;
+    text-align: justify;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    background: #343434;
+
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.article {
+    background: #f6f6f6;
+    color: #343434;
+    /*font-size: 18px;*/
+    /*font-weight: 400;*/
+    /*text-align: justify;*/
+}
+
+.article h1 {
+    margin: 0px;
+    font-size: 32px;
+}
+
+.footer {
+    background-color: #474747;
+    text-align: center;
+    font-size: 9px;
+}
+
+.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
