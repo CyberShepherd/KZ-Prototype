@@ -1,0 +1,117 @@
+/*TODO resize form*/
+/*TODO resize button*/
+body{
+}
+
+body p{
+    margin: 2px;
+}
+
+label {
+    display: block;
+}
+
+button {
+
+}
+
+#container {
+    width: 100%;
+    min-height: 1080px;
+}
+
+#header {
+    width: 100%;
+    min-height: 60px;
+    padding: 10px;
+}
+
+#header div {
+    float: left;
+}
+
+#slider {
+    /*position: relative;*/
+    width: 100%;
+    min-height: 550px;
+    min-width: 1000px;
+    background-image: url("img/winter0.jpg");
+    background-size: 100%;
+    background-position: bottom;
+}
+
+#slider-space {
+    width: 100%;
+    min-height: 500px;
+}
+
+#slider-margin {
+    float: left;
+    width: 45%;
+    min-height: 50px;
+}
+
+#slider-dots {
+    float: left;
+    min-height: 50px;
+    text-align: center;
+}
+
+#userform {
+    width: 100%;
+    min-height: 550px;
+}
+
+#footer {
+    width: 100%;
+    min-height: 30px;
+    padding: 10px;
+}
+
+#form {
+    width: 418px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 200px;
+}
+
+input, select, button {
+    height: 40px;
+    margin: 3px;
+}
+
+.input-50 {
+    width: 200px;
+}
+
+.input-100 {
+    width: 409px;
+}
+
+.input-30 {
+    width: 120px;
+}
+
+.input-70 {
+    width: 280px;
+}
+
+.spacer {
+    height: 50px;
+    width: 100%;
+}
+
+.small-spacer {
+    height: 20px;
+    width: 100%;
+}
+
+.floater {
+    float: left;
+}

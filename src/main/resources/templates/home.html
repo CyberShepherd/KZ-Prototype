@@ -1,0 +1,120 @@
+<html lang="pl">
+<head>
+    <meta title="Krzywy Zakątek">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="container">
+    <header>
+    <div id="header" class="header">
+        <div class="logo"><i class="icon-chart-area"></i>Krzywy Zakątek</div>
+    </div>
+    </header>
+    <div style="clear:both;"></div>
+    <article>
+    <div id="slider">
+        <div id="slider-space"></div>
+<!--        TODO: Remove slider margin. Make slide-dots centered-->
+        <div id="slider-margin"></div>
+        <div id="slide-dots">
+            <i class="icon-circle"></i>
+            <i class="icon-circle-empty"></i>
+            <i class="icon-circle-empty"></i>
+            <i class="icon-circle-empty"></i>
+            <i class="icon-circle-empty"></i>
+        </div>
+    </div>
+    </article>
+    <div id="userform" class="article">
+        <div class="spacer"></div>
+        <div class="centered">
+            <h1>Book it today!</h1>
+            <p>by filling the form</p>
+        </div>
+        <div class="small-spacer"></div>
+<!--        TODO: Implement dialog box-->
+        <div class="dialogbox"></div>
+        <div id="form">
+            <div id="personal-info">
+                <div>
+                    <input class="input-50" type="text" id="formName" placeholder="Name"/>
+                    <input class="input-50" type="text" id="formLastname" placeholder="Lastname"/>
+                </div>
+                <div>
+                    <input class="input-100" type="text" id="formPesel" placeholder="PESEL"/>
+                </div>
+                <div>
+                    <input class="input-100" type="text" id="formEmail" placeholder="Email: your@email.com"/>
+                </div>
+                <div>
+                    <input class="input-100" type="text" id="formPhoneNum" placeholder="Phone: +48600200100"/>
+                </div>
+                <div>
+                    <input class="input-70" type="text" id="formStreet" placeholder="Street"/>
+                    <input class="input-30" type="text" id="formStreetNum" placeholder="Number"/>
+                </div>
+                <div>
+                    <input class="input-30" type="text" id="formPostalCode" placeholder="Zip Code"/>
+                    <input class="input-70" type="text" id="formCity" placeholder="City"/>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div id="lodgeSection">
+                <div class="centered">
+                    <h1>
+                        Select your lodge
+                    </h1>
+                </div>
+                <div class="small-spacer"></div>
+                <div id="lodge-select">
+                    <div>
+                        <select id="lodgeSelector" class="input-70">
+                            <option value="1">Jaworzynka</option>
+                            <option value="2">Buczynka</option>
+                            <option value="3">Kalinka</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="date-select">
+                    <div>
+                        <div class="floater">
+                            <label for="formFromDate">From</label>
+                            <input class="input-50" type="date" id="formFromDate" placeholder="From: rrrr-mm-dd"/>
+                        </div>
+                        <div class="floater">
+                            <label for="formToDate">To</label>
+                            <input class="input-50" type="date" id="formToDate" placeholder="To: rrrr-mm-dd"/>
+                        </div>
+                    </div>
+    <!--                TODO: Add price calculation-->
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="spacer"></div>
+            <div id="submition">
+                <div>
+                    <button id="btn-submition" class="centered">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+
+    <div id="footer" class="footer">
+        <p>Contact:</p>
+        <p><i class="icon-phone"></i> +48607421420</p>
+        <p><i class="icon-mail-alt"></i> krzywy.zakatek@dev.pl</p>
+        <p><a href=""><i class="icon-facebook-rect"></i> Krzywy Zakątek</a></p>
+        <p><a href=""><i class="icon-twitter-bird"></i> @krzywZak</a></p>
+        <p><a href=""><i class="icon-googleplus-rect"></i> Krzywy Zakątek - Bieszczady</a></p>
+    </div>
+</div>
+<script type="text/javascript" src="slider.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="submition.js"></script>
+</body>
+</html>
