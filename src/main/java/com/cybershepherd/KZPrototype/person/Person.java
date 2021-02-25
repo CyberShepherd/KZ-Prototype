@@ -1,9 +1,6 @@
 package com.cybershepherd.KZPrototype.person;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,6 +8,7 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 @Table
 public class Person {
@@ -28,6 +26,7 @@ public class Person {
     private String pesel;
     private String fullname;
     private String address;
+    private String apartment;
     private String postalCode;
     private String city;
     private String country;
