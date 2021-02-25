@@ -11,6 +11,7 @@ function getDomain(){
 function getLodgesJson(){
     $.getJSON(host + '/api/lodge', function(data) {
         lodgesJson = data;
+        initializeLodgeSelectList();
         console.log(lodgesJson);
     });
 }
@@ -20,3 +21,17 @@ const lodgeData = function(){
 }
 
 $(document).ready(lodgeData);
+
+function buildLodgeSelectList(){
+    const selectNaN = '<option value="" disabled selected>Select lodge</option>';
+    var innerHtml = selectNaN;
+    if(lodgesJson == undefined || lodgesJson == null) return innerHtml;
+    for(let i=0; i<lodgesJson.length; i++)
+        innerHtml += '<option value="' + lodgesJson[i].id + '">' + lodgesJson[i].name + '</option>';
+    return innerHtml;
+}
+
+function initializeLodgeSelectList(){
+    var innerHTML = buildLodgeSelectList();
+    $('#lodgeSelector').html(innerHTML);
+}
