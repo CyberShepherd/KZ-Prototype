@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/api/useform")
+@RequestMapping("/api/userform")
 @AllArgsConstructor
 public class UserformController {
     private final UserformService userformService;
