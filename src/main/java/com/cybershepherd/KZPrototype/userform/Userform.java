@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.beans.Transient;
 import java.time.LocalDate;
 
 @AllArgsConstructor
@@ -20,7 +21,7 @@ public class Userform {
     private String pesel;
     private String email;
     private String phoneNum;
-    private String adress;
+    private String address;
     private String apartment;
     private String postalCode;
     private String city;
@@ -28,11 +29,12 @@ public class Userform {
     private LocalDate arrival;
     private LocalDate department;
 
+    @Transient
     public Person getPerson(){
         return Person.builder()
                 .pesel(this.pesel)
                 .fullname(this.name + " " + this.lastname)
-                .address(this.adress)
+                .address(this.address)
                 .apartment(this.apartment)
                 .postalCode(this.postalCode)
                 .city(this.city)
@@ -41,12 +43,14 @@ public class Userform {
                 .build();
     }
 
+    @Transient
     public Lodge getLodge(){
         return Lodge.builder()
                 .name(this.lodge)
                 .build();
     }
 
+    @Transient
     public RentOrder getRentOrder(){
         return RentOrder.builder()
                 .arrival(this.arrival)
