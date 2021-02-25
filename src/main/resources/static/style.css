@@ -39,3 +39,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.icon-circle-empty:hover {
+    color: #ffc100;
+    cursor: pointer;
+}
