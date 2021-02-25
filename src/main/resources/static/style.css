@@ -1,11 +1,28 @@
 /*TODO add font*/
 /*TODO add form style*/
 /*TODO add button style*/
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto&display=swap');
+
 body {
     color: #f6f6f6;
     text-align: justify;
     padding: 0px;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input, select, textarea {
+    border-radius: 5px;
+    border: 1px solid #7a7a7a;
+}
+
+header {
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 5px #ffc100;
+    outline: none;
 }
 
 a {

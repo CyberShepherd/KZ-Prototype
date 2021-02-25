@@ -104,6 +104,7 @@ input, select, button {
 
 .spacer {
     height: 50px;
+    width: 100%;
 }
 
 .floater {
