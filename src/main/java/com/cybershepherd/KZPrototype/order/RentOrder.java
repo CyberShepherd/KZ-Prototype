@@ -29,8 +29,4 @@ public class RentOrder {
     private Long personId;
     private LocalDate arrival;
     private LocalDate department;
-    @Transient
-    private String clientPesel;
-    @Transient
-    private String lodgeName;
 }
