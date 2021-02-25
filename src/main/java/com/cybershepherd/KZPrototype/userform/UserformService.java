@@ -11,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.List;
+
 @AllArgsConstructor
 @Service
 public class UserformService {
@@ -18,7 +21,6 @@ public class UserformService {
     private final PersonService personService;
     private final LodgeService lodgeService;
 
-//    TODO check if id null
     public ResponseEntity submitUserform(Userform userform){
         Person person = userform.getPerson();
         ResponseEntity personResponse = this.processPerson(person);
@@ -32,8 +34,12 @@ public class UserformService {
         if(lodgeService.isLodgeOfGivenId(lodge.getId()))
             rentOrder.setLodgeId(lodge.getId());
         else
-            return new ResponseEntity<String>("Lodge of given id doesn't exist", HttpStatus.BAD_REQUEST);
-//        TODO: Add date period check
+            return new ResponseEntity("Lodge of given id doesn't exist", HttpStatus.BAD_REQUEST);
+
+//        TODO: Move to RentOrder service
+        List<RentOrder> bookedOrders = rentOrderService.checkRentOrder(rentOrder);
+        if(bookedOrders.size() > 0) return new ResponseEntity("Lodge booked in given term", HttpStatus.CONFLICT);
+
         ResponseEntity rentOrderResponse = rentOrderService.addRentOrder(rentOrder);
         HttpStatus status = HttpStatus.OK;
         StringBuilder sb = new StringBuilder();

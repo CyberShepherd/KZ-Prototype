@@ -13,6 +13,8 @@ import java.util.Optional;
 public class PersonService {
     private final PersonRepository repository;
 
+
+//    TODO: Add null check
     /**
      * Checks if person of given pesel already exists. If it doesn't then new
      * person is added to the database.

@@ -101,7 +101,7 @@ const validatePesel = function () {
 
 //TODO: Add validation
 const validateEmail = function () {
-    return true;
+    return userform.email.includes('@') ? true : false;
 }
 
 const validatePhoneNum = function(){
@@ -111,7 +111,6 @@ const validatePhoneNum = function(){
     return valid;
 }
 
-//TODO: add validation
 const validateAddress = function(){
     return true;
 }
@@ -120,9 +119,8 @@ const validateApartment = function () {
     return isMadeOfNumbersOnly(userform.apartment);
 }
 
-//TODO: add validation
 const validatePostalcode = function () {
-    return true;
+    return /^[0-9][0-9][-][0-9][0-9][0-9]/.test(statement) ? true : false;
 }
 
 const validateCity = function(){

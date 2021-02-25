@@ -53,7 +53,6 @@ public class Userform {
         return RentOrder.builder()
                 .arrival(this.arrival)
                 .department(this.department)
-                .clientPesel(this.pesel)
                 .lodgeId(this.lodgeId)
                 .build();
     }

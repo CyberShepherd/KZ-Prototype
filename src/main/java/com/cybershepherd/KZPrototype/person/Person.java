@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Person {
+//    TODO: Define nonnullable columns
     @Id
     @SequenceGenerator(
             name = "person_sequence",
