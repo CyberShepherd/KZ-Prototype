@@ -3,10 +3,7 @@ package com.cybershepherd.KZPrototype.userform;
 import com.cybershepherd.KZPrototype.lodge.Lodge;
 import com.cybershepherd.KZPrototype.order.RentOrder;
 import com.cybershepherd.KZPrototype.person.Person;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.beans.Transient;
 import java.time.LocalDate;
@@ -15,6 +12,7 @@ import java.time.LocalDate;
 @Builder
 @Getter
 @Setter
+@ToString
 public class Userform {
     private String name;
     private String lastname;
