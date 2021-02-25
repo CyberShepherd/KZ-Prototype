@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Lodge {
+//    TODO: define non-nullable colums
     @Id
     @SequenceGenerator(
             name = "lodge_sequence",

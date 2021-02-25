@@ -18,23 +18,4 @@ public class UserformController {
         return userformService.submitUserform(userform);
     }
 
-//    TODO: Remove when not needed
-    @GetMapping ResponseEntity getSimpleUserform(){
-        Userform userform = Userform.builder()
-                .name("gabriel")
-                .lastname("modzelewski")
-                .pesel("95053102255")
-                .email("gabriel.m@op.pl")
-                .phoneNum("+48607203565")
-                .address("Alfonsa Kawki 7")
-                .apartment("34")
-                .postalCode("84-322")
-                .city("warsaw")
-                .lodgeId(1L)
-                .arrival(LocalDate.of(2021, 5, 11))
-                .department(LocalDate.of(2021, 5, 22))
-                .build();
-        return new ResponseEntity<Userform>(userform, HttpStatus.OK);
-
-    }
 }

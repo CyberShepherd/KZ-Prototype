@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Entity
 @Table
 public class RentOrder {
-    //TODO: Remove PK and generate PK based on 2 FK
+//    TODO: Define nonnullable columns
     @Id
     @SequenceGenerator(
             name = "rentorder_sequence",

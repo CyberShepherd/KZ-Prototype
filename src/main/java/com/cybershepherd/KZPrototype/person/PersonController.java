@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonController {
     private final PersonService service;
 
-    //TODO: Add service implementation
     @PostMapping
     public ResponseEntity addPerson(@RequestBody Person person){
         return service.addPerson(person);
