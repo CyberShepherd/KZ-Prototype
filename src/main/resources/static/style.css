@@ -92,3 +92,8 @@ button:hover {
     color: #ffc100;
     cursor: pointer;
 }
+
+.borderError {
+    border: 1px solid red !important;
+    background: #fdf4f4 !important;
+}
