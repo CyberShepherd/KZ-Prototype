@@ -2,10 +2,7 @@ package com.cybershepherd.KZPrototype.order;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Getter
@@ -18,6 +15,15 @@ import java.time.LocalDate;
 public class RentOrder {
     //TODO: Remove PK and generate PK based on 2 FK
     @Id
+    @SequenceGenerator(
+            name = "rentorder_sequence",
+            sequenceName = "rentorder_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "rentorder_sequence"
+    )
     private Long id;
     private Long lodgeId;
     private Long personId;

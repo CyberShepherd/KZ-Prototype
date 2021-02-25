@@ -1,5 +1,6 @@
 package com.cybershepherd.KZPrototype.person;
 
+import com.sun.istack.Nullable;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,5 +24,17 @@ public class PersonService {
         if(optionalPerson.isPresent()) return new ResponseEntity(HttpStatus.OK);
         repository.save(person);
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+    /**
+     * finds given person id in the database
+     * @param person
+     * @return
+     */
+    public Long findPersonIdByPesel(Person person){
+        if(person == null || person.getPesel() == null) return null;
+        Optional<Person> optionalPerson = repository.findPersonByPesel(person.getPesel());
+        if(optionalPerson.isPresent()) return optionalPerson.get().getId();
+        else return null;
     }
 }
