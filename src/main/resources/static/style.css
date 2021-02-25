@@ -40,6 +40,18 @@ a:hover {
     cursor: pointer;
 }
 
+button {
+    background: #999999;
+    color: #f6f6f6;
+    border: 1px solid #aeaeae;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+}
+
 .header {
     background: #343434;
 
