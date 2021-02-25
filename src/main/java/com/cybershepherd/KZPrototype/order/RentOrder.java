@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.time.LocalDate;
 
 @Getter
@@ -24,4 +25,8 @@ public class RentOrder {
     private Long personId;
     private LocalDate arrival;
     private LocalDate department;
+    @Transient
+    private String clientPesel;
+    @Transient
+    private String lodgeName;
 }
