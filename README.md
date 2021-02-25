@@ -2,11 +2,8 @@
 Service based on Spring, Hibernate, Gradle, JS
 
 ## How to run
-Service requires existing mariadb database server. 
-
-###MariaDB
+Service requires existing mariadb database server.
 You can create one with docker using:
-
 ```
 docker run --name CONTAINER -dp 3306:3306 -e MYSQL_ROOT_PASSWORD=root mariadb
 ```
