@@ -3,16 +3,27 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
 </head>
 <body>
 <div id="container">
     <header>
     <div id="header" class="header">
-        <div class="logo">Krzywy Zakątek</div>
+        <div class="logo"><i class="icon-chart-area"></i>Krzywy Zakątek</div>
     </div>
     </header>
     <article>
-    <div id="slider"></div>
+    <div id="slider">
+        <div id="slider-space"></div>
+        <div id="slider-margin"></div>
+        <div id="slide-dots">
+            <i class="icon-circle"></i>
+            <i class="icon-circle-empty"></i>
+            <i class="icon-circle-empty"></i>
+            <i class="icon-circle-empty"></i>
+            <i class="icon-circle-empty"></i>
+        </div>
+    </div>
     </article>
     <div id="userform" class="article">
         <div class="centered">
@@ -20,7 +31,12 @@
             <p>Wypełnij formularz</p>
         </div>
         <div class="dialogbox"></div>
-        <div id="form"></div>
+        <div id="form">
+            <div id="personal-info"></div>
+            <div id="lodge-select"></div>
+            <div id="date-select"></div>
+            <div id="submition"></div>
+        </div>
     </div>
     <div id="footer" class="footer">Kontakt na mail kwprototype@test.pl</div>
 </div>
