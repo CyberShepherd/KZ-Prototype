@@ -2,6 +2,10 @@ body{
 
 }
 
+body p{
+    margin: 2px;
+}
+
 label {
 
 }
