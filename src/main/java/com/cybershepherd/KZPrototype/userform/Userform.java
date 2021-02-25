@@ -23,9 +23,9 @@ public class Userform {
     private String apartment;
     private String postalCode;
     private String city;
-    private String lodge;
     private LocalDate arrival;
     private LocalDate department;
+    private Long lodgeId;
 
     @Transient
     public Person getPerson(){
@@ -44,7 +44,7 @@ public class Userform {
     @Transient
     public Lodge getLodge(){
         return Lodge.builder()
-                .name(this.lodge)
+                .id(lodgeId)
                 .build();
     }
 
@@ -54,7 +54,7 @@ public class Userform {
                 .arrival(this.arrival)
                 .department(this.department)
                 .clientPesel(this.pesel)
-                .lodgeName(this.lodge)
+                .lodgeId(this.lodgeId)
                 .build();
     }
 }

@@ -30,7 +30,7 @@ public class UserformController {
                 .apartment("34")
                 .postalCode("84-322")
                 .city("warsaw")
-                .lodge("Jaworzynka")
+                .lodgeId(1L)
                 .arrival(LocalDate.of(2021, 5, 11))
                 .department(LocalDate.of(2021, 5, 22))
                 .build();

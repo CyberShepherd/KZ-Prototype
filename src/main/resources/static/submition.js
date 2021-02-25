@@ -8,7 +8,7 @@ var userform = {
     apartment: null,
     postalCode: null,
     city: null,
-    lodge: null,
+    lodgeId: null,
     arrival: null,
     department: null
 }
@@ -23,7 +23,7 @@ var userformValidation = {
     apartment: null,
     postalCode: null,
     city: null,
-    lodge: null,
+    lodgeId: null,
     dates: null
 }
 
@@ -35,13 +35,13 @@ function initializeUserform(){
     userform.phoneNum = $('#formEmail').val();
     userform.address = $('#formStreet').val();
     userform.apartment = $('#formStreetNum').val();
+    userform.postalCode = $('#formPostalCode').val();
     userform.city = $('#formCity').val();
-    userform.lodge = $('#lodgeSelector').val();
+    userform.lodgeId = $('#lodgeSelector').val();
     userform.arrival = $('#formFromDate').val();
     userform.department = $('#formToDate').val();
 }
 
-/*TODO validate each value*/
 function validateUserform() {
     userformValidation.name = validateName();
     userformValidation.lastname = validateLastname();
@@ -52,15 +52,30 @@ function validateUserform() {
     userformValidation.apartment = validateApartment();
     userformValidation.postalCode = validatePostalcode();
     userformValidation.city = validateCity();
-    userformValidation.lodge = validateLodge();
+    userformValidation.lodgeId = validateLodge();
     userformValidation.dates = validateDates();
     console.log(userformValidation);
 }
 
 
-
+//TODO:Add validation later
 const btnFunction = function () {
-    console.log("Userform is: " + userformValid());
+    postUserform();
+}
+
+function postUserform(){
+    initializeUserform();
+    console.log(userform);
+    var response = $.ajax({
+        url: host + '/api/userform',
+        type: 'POST',
+        data: JSON.stringify(userform, null, 2),
+        dataType: 'json',
+        contentType: 'application/json'
+    });
+    response.done(function(){
+        console.log("Request send and received");
+    })
 }
 
 const userformValid = function () {
@@ -124,10 +139,10 @@ const validateDates = function(){
 }
 
 const validateLodge = function () {
-    let lodge = userform.lodge;
+    let lodge = userform.lodgeId;
     if(!isStatementNotNull(lodge)) return false;
     for(let i=0; i<lodgesJson.length; i++){
-        if(lodge == lodgesJson.name) return true;
+        if(lodge == lodgesJson[i].id) return true;
     }
     return false;
 
