@@ -25,5 +25,4 @@ public class Lodge {
     private Long id;
     private String name;
     private Long dailyPrice;
-    private boolean paymentBooked;
 }
